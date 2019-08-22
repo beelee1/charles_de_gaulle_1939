@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Charles De Gaulle 1939" version="1.0"/>
+  <info name="Charles de Gaulle 1939" version="1.0"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.8"/>
   <diceSides value="6"/>
@@ -1207,14 +1207,14 @@
     <!-- In turn order -->
     <player name="Germans" optional="false"/>
     <player name="Russians" optional="false"/>
-    <player name="Japanese" optional="false"/>
-    <player name="Americans" optional="false"/>
-    <player name="Chinese" optional="false"/>
     <player name="British" optional="false"/>
     <player name="UK_Pacific" optional="false"/>
     <player name="Italians" optional="false"/>
-    <player name="ANZAC" optional="false"/>
     <player name="French" optional="false"/>
+    <player name="ANZAC" optional="false"/>
+    <player name="Japanese" optional="false"/>
+    <player name="Chinese" optional="false"/>
+    <player name="Americans" optional="false"/>
     <player name="Dutch" optional="true"/>
     <player name="Mongolians" optional="true"/>
     <player name="Neutral_Axis" optional="true"/>
@@ -1292,20 +1292,20 @@
       <step name="germanBidPlace" delegate="placeBid" player="Germans" maxRunCount="1"/>
       <step name="russianBid" delegate="bid" player="Russians" maxRunCount="1"/>
       <step name="russianBidPlace" delegate="placeBid" player="Russians" maxRunCount="1"/>
-      <step name="japaneseBid" delegate="bid" player="Japanese" maxRunCount="1"/>
-      <step name="japaneseBidPlace" delegate="placeBid" player="Japanese" maxRunCount="1"/>
-      <step name="americanBid" delegate="bid" player="Americans" maxRunCount="1"/>
-      <step name="americanBidPlace" delegate="placeBid" player="Americans" maxRunCount="1"/>
-      <step name="chineseBid" delegate="bid" player="Chinese" maxRunCount="1"/>
-      <step name="chineseBidPlace" delegate="placeBid" player="Chinese" maxRunCount="1"/>
       <step name="britishBid" delegate="bid" player="British" maxRunCount="1"/>
       <step name="britishBidPlace" delegate="placeBid" player="British" maxRunCount="1"/>
       <step name="italianBid" delegate="bid" player="Italians" maxRunCount="1"/>
       <step name="italianBidPlace" delegate="placeBid" player="Italians" maxRunCount="1"/>
-      <step name="anzacBid" delegate="bid" player="ANZAC" maxRunCount="1"/>
-      <step name="anzacBidPlace" delegate="placeBid" player="ANZAC" maxRunCount="1"/>
       <step name="frenchBid" delegate="bid" player="French" maxRunCount="1"/>
       <step name="frenchBidPlace" delegate="placeBid" player="French" maxRunCount="1"/>
+      <step name="anzacBid" delegate="bid" player="ANZAC" maxRunCount="1"/>
+      <step name="anzacBidPlace" delegate="placeBid" player="ANZAC" maxRunCount="1"/>
+      <step name="japaneseBid" delegate="bid" player="Japanese" maxRunCount="1"/>
+      <step name="japaneseBidPlace" delegate="placeBid" player="Japanese" maxRunCount="1"/>
+      <step name="chineseBid" delegate="bid" player="Chinese" maxRunCount="1"/>
+      <step name="chineseBidPlace" delegate="placeBid" player="Chinese" maxRunCount="1"/>
+      <step name="americanBid" delegate="bid" player="Americans" maxRunCount="1"/>
+      <step name="americanBidPlace" delegate="placeBid" player="Americans" maxRunCount="1"/>
       <!-- Germans Game Sequence -->
       <step name="germansTech" delegate="tech" player="Germans"/>
       <step name="germansTechActivation" delegate="tech_activation" player="Germans"/>
@@ -1328,36 +1328,6 @@
       <step name="russiansNonCombatMove" delegate="move" player="Russians" display="Non Combat Move"/>
       <step name="russiansPlace" delegate="place" player="Russians"/>
       <step name="russiansEndTurn" delegate="endTurn" player="Russians"/>
-      <!-- Japanese Game Sequence -->
-      <step name="japaneseTech" delegate="tech" player="Japanese"/>
-      <step name="japaneseTechActivation" delegate="tech_activation" player="Japanese"/>
-      <step name="japanesePurchase" delegate="purchase" player="Japanese"/>
-      <step name="japanesePolitics" delegate="politics" player="Japanese"/>
-      <step name="japaneseCombatMove" delegate="move" player="Japanese"/>
-      <step name="japaneseAirborneCombatMove" delegate="specialCombatMove" player="Japanese" display="Airborne Attack Move"/>
-      <step name="japaneseBattle" delegate="battle" player="Japanese"/>
-      <step name="japaneseNonCombatMove" delegate="move" player="Japanese" display="Non Combat Move"/>
-      <step name="japanesePlace" delegate="place" player="Japanese"/>
-      <step name="japaneseEndTurn" delegate="endTurn" player="Japanese"/>
-      <!-- Americans Game Sequence -->
-      <step name="americansTech" delegate="tech" player="Americans"/>
-      <step name="americansTechActivation" delegate="tech_activation" player="Americans"/>
-      <step name="americansPurchase" delegate="purchase" player="Americans"/>
-      <step name="americansPolitics" delegate="politics" player="Americans"/>
-      <step name="americansCombatMove" delegate="move" player="Americans"/>
-      <step name="americansAirborneCombatMove" delegate="specialCombatMove" player="Americans" display="Airborne Attack Move"/>
-      <step name="americansBattle" delegate="battle" player="Americans"/>
-      <step name="americansNonCombatMove" delegate="move" player="Americans" display="Non Combat Move"/>
-      <step name="americansPlace" delegate="place" player="Americans"/>
-      <step name="americansEndTurn" delegate="endTurn" player="Americans"/>
-      <!-- Chinese Game Sequence -->
-      <step name="chinesePurchase" delegate="purchase" player="Chinese"/>
-      <step name="chinesePolitics" delegate="politics" player="Chinese"/>
-      <step name="chineseCombatMove" delegate="move" player="Chinese"/>
-      <step name="chineseBattle" delegate="battle" player="Chinese"/>
-      <step name="chineseNonCombatMove" delegate="move" player="Chinese" display="Non Combat Move"/>
-      <step name="chinesePlace" delegate="place" player="Chinese"/>
-      <step name="chineseEndTurn" delegate="endTurn" player="Chinese"/>
       <!-- British Game Sequence -->
       <step name="britishTech" delegate="tech" player="British"/>
       <step name="britishTechActivation" delegate="tech_activation" player="British"/>
@@ -1395,17 +1365,6 @@
       <step name="italiansNonCombatMove" delegate="move" player="Italians" display="Non Combat Move"/>
       <step name="italiansPlace" delegate="place" player="Italians"/>
       <step name="italiansEndTurn" delegate="endTurn" player="Italians"/>
-      <!-- ANZAC Game Sequence -->
-      <step name="anzacTech" delegate="tech" player="ANZAC"/>
-      <step name="anzacTechActivation" delegate="tech_activation" player="ANZAC"/>
-      <step name="anzacPurchase" delegate="purchase" player="ANZAC"/>
-      <step name="anzacPolitics" delegate="politics" player="ANZAC"/>
-      <step name="anzacCombatMove" delegate="move" player="ANZAC"/>
-      <step name="anzacAirborneCombatMove" delegate="specialCombatMove" player="ANZAC" display="Airborne Attack Move"/>
-      <step name="anzacBattle" delegate="battle" player="ANZAC"/>
-      <step name="anzacNonCombatMove" delegate="move" player="ANZAC" display="Non Combat Move"/>
-      <step name="anzacPlace" delegate="place" player="ANZAC"/>
-      <step name="anzacEndTurn" delegate="endTurn" player="ANZAC"/>
       <!-- French Game Sequence -->
       <step name="frenchTech" delegate="tech" player="French"/>
       <step name="frenchTechActivation" delegate="tech_activation" player="French"/>
@@ -1420,6 +1379,47 @@
         <stepProperty name="turnSummaryPlayers" value="ANZAC:French"/>
       </step>
       <step name="endRoundStep" delegate="endRound"/>
+      <!-- ANZAC Game Sequence -->
+      <step name="anzacTech" delegate="tech" player="ANZAC"/>
+      <step name="anzacTechActivation" delegate="tech_activation" player="ANZAC"/>
+      <step name="anzacPurchase" delegate="purchase" player="ANZAC"/>
+      <step name="anzacPolitics" delegate="politics" player="ANZAC"/>
+      <step name="anzacCombatMove" delegate="move" player="ANZAC"/>
+      <step name="anzacAirborneCombatMove" delegate="specialCombatMove" player="ANZAC" display="Airborne Attack Move"/>
+      <step name="anzacBattle" delegate="battle" player="ANZAC"/>
+      <step name="anzacNonCombatMove" delegate="move" player="ANZAC" display="Non Combat Move"/>
+      <step name="anzacPlace" delegate="place" player="ANZAC"/>
+      <step name="anzacEndTurn" delegate="endTurn" player="ANZAC"/>
+      <!-- Japanese Game Sequence -->
+      <step name="japaneseTech" delegate="tech" player="Japanese"/>
+      <step name="japaneseTechActivation" delegate="tech_activation" player="Japanese"/>
+      <step name="japanesePurchase" delegate="purchase" player="Japanese"/>
+      <step name="japanesePolitics" delegate="politics" player="Japanese"/>
+      <step name="japaneseCombatMove" delegate="move" player="Japanese"/>
+      <step name="japaneseAirborneCombatMove" delegate="specialCombatMove" player="Japanese" display="Airborne Attack Move"/>
+      <step name="japaneseBattle" delegate="battle" player="Japanese"/>
+      <step name="japaneseNonCombatMove" delegate="move" player="Japanese" display="Non Combat Move"/>
+      <step name="japanesePlace" delegate="place" player="Japanese"/>
+      <step name="japaneseEndTurn" delegate="endTurn" player="Japanese"/>
+      <!-- Chinese Game Sequence -->
+      <step name="chinesePurchase" delegate="purchase" player="Chinese"/>
+      <step name="chinesePolitics" delegate="politics" player="Chinese"/>
+      <step name="chineseCombatMove" delegate="move" player="Chinese"/>
+      <step name="chineseBattle" delegate="battle" player="Chinese"/>
+      <step name="chineseNonCombatMove" delegate="move" player="Chinese" display="Non Combat Move"/>
+      <step name="chinesePlace" delegate="place" player="Chinese"/>
+      <step name="chineseEndTurn" delegate="endTurn" player="Chinese"/>
+      <!-- Americans Game Sequence -->
+      <step name="americansTech" delegate="tech" player="Americans"/>
+      <step name="americansTechActivation" delegate="tech_activation" player="Americans"/>
+      <step name="americansPurchase" delegate="purchase" player="Americans"/>
+      <step name="americansPolitics" delegate="politics" player="Americans"/>
+      <step name="americansCombatMove" delegate="move" player="Americans"/>
+      <step name="americansAirborneCombatMove" delegate="specialCombatMove" player="Americans" display="Airborne Attack Move"/>
+      <step name="americansBattle" delegate="battle" player="Americans"/>
+      <step name="americansNonCombatMove" delegate="move" player="Americans" display="Non Combat Move"/>
+      <step name="americansPlace" delegate="place" player="Americans"/>
+      <step name="americansEndTurn" delegate="endTurn" player="Americans"/>
     </sequence>
   </gamePlay>
   <production>
@@ -3717,7 +3717,11 @@
       <option name="alliedOwnershipTerritories" value="Java:Sumatra:Borneo:Celebes" count="4"/>
     </attachment>
     <!-- British Objectives -->
+    <attachment name="conditionAttachment_UKownsCongoAndIceland" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+      <option name="directOwnershipTerritories" value="Belgian Congo:Iceland" count="2"/>
+    </attachment>
     <attachment name="objectiveAttachment_British_1_Original" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+      <option name="conditions" value="conditionAttachment_UKownsCongoAndIceland"/>
       <option name="objectiveValue" value="5"/>
       <option name="directOwnershipTerritories" value="original"/>
       <option name="atWarPlayers" value="Germans" count="1"/>
@@ -3938,6 +3942,12 @@
     <attachment name="conditionAttachmentTurn3" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="rounds" value="3"/>
     </attachment>
+    <attachment name="conditionAttachmentTurn3Orhigher" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+      <option name="rounds" value="3-+"/>
+    </attachment>
+    <attachment name="conditionAttachmentTurn2Orhigher" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+      <option name="rounds" value="2-+"/>
+    </attachment>
     <attachment name="conditionAttachmentTurn4OrHigher" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="rounds" value="4-+"/>
     </attachment>
@@ -4036,6 +4046,12 @@
       <option name="relationship" value="Italians:Russians:anyWar"/>
       <option name="invert" value="true"/>
     </attachment>
+    <attachment name="conditionAttachment_Italians_Not_At_War_With_British" attachTo="Italians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+      <option name="relationship" value="Italians:British:anyNeutral"/>
+    </attachment>
+    <attachment name="conditionAttachment_Italians_Not_At_War_With_French" attachTo="Italians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+      <option name="relationship" value="Italians:French:anyNeutral"/>
+    </attachment>
     <attachment name="conditionAttachmentGermansNotYetAtWarWithChinese" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="relationship" value="Germans:Chinese:anyNeutral"/>
     </attachment>
@@ -4047,6 +4063,9 @@
     </attachment>
     <attachment name="conditionAttachment_Germans_Not_Yet_At_War_With_TrueNeutrals" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="relationship" value="Germans:Neutral_True:anyNeutral"/>
+    </attachment>
+    <attachment name="conditionAttachment_Italians_Not_Yet_At_War_With_Dutch" attachTo="Italians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+      <option name="relationship" value="Italians:Dutch:anyNeutral"/>
     </attachment>
     <attachment name="conditionAttachment_British_Not_Yet_At_War_With_TrueNeutrals" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="relationship" value="British:Neutral_True:anyNeutral"/>
@@ -4103,6 +4122,12 @@
     </attachment>
     <attachment name="conditionAttachment_British_Not_Yet_At_War_With_Japanese" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="relationship" value="British:Japanese:anyNeutral"/>
+    </attachment>
+    <attachment name="conditionAttachment_British_Not_Yet_At_War_With_Italians" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+      <option name="relationship" value="British:Italians:anyNeutral"/>
+    </attachment>
+    <attachment name="conditionAttachment_French_Not_Yet_At_War_With_Italians" attachTo="French" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+      <option name="relationship" value="French:Italians:anyNeutral"/>
     </attachment>
     <!-- Russian Territories next to Mongolian Territories:
 						Timguska:Yenisey:Yakut S.S.R.:Buryatia:Amur
@@ -4359,27 +4384,7 @@
       <option name="resource" value="PUs"/>
       <option name="resourceCount" value="5"/>
     </attachment>
-    <attachment name="triggerAttachment_Americans_War_Production_Eastern" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-      <option name="trigger" value="conditionAttachment_Americans_At_War_With_At_Least_One_Axis:conditionAttachment_Americans_Major_Factory_Eastern"/>
-      <option name="removeUnits" value="Eastern United States:factory_minor"/>
-      <option name="placement" value="Eastern United States:factory_major"/>
-      <option name="uses" value="1"/>
-      <option name="when" value="after:americansPolitics"/>
-    </attachment>
-    <attachment name="triggerAttachment_Americans_War_Production_Central" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-      <option name="trigger" value="conditionAttachment_Americans_At_War_With_At_Least_One_Axis:conditionAttachment_Americans_Major_Factory_Central"/>
-      <option name="removeUnits" value="Central United States:factory_minor"/>
-      <option name="placement" value="Central United States:factory_major"/>
-      <option name="uses" value="1"/>
-      <option name="when" value="after:americansPolitics"/>
-    </attachment>
-    <attachment name="triggerAttachment_Americans_War_Production_Western" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-      <option name="trigger" value="conditionAttachment_Americans_At_War_With_At_Least_One_Axis:conditionAttachment_Americans_Major_Factory_Western"/>
-      <option name="removeUnits" value="Western United States:factory_minor"/>
-      <option name="placement" value="Western United States:factory_major"/>
-      <option name="uses" value="1"/>
-      <option name="when" value="after:americansPolitics"/>
-    </attachment>
+    
     <!-- French Triggers -->
     <attachment name="triggerAttachment_Germans_Conquer_France" attachTo="Germans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="trigger" value="conditionAttachment_French_1_Lose_France"/>
@@ -4909,6 +4914,15 @@
       <option name="relationshipChange" value="Mongolians:Neutral_Allies:Friendly_Neutral"/>
       <option name="text" value="Axis_War_Neutral_True_Mongolians"/>
     </attachment>
+    <attachment name="politicalActionAttachment_Italians_To_War_With_Dutch" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+      <option name="conditions" value="conditionAttachment_Italians_Not_Yet_At_War_With_Dutch"/>
+      <option name="relationshipChange" value="Italians:Dutch:War"/>
+      <option name="relationshipChange" value="British:Dutch:Friendly_Neutral"/>
+      <option name="relationshipChange" value="UK_Pacific:Dutch:Friendly_Neutral"/>
+      <option name="relationshipChange" value="ANZAC:Dutch:Friendly_Neutral"/>
+      <option name="relationshipChange" value="French:Dutch:Friendly_Neutral"/>
+      <option name="text" value="Italians_War_Dutch"/>
+    </attachment>
     <!-- TODO: I suppose all the allies could go to war with Mongolians, but seriously.... they never would, so I'm not going to crowd out everyone's politics screen with it. -->
     <attachment name="politicalActionAttachment_Allies_To_War_With_Mongolians" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
       <option name="conditions" value="conditionAttachment_Russians_May_Declare_War_On_Mongolians"/>
@@ -5108,6 +5122,44 @@
       <option name="relationshipChange" value="Chinese:ANZAC:Allied"/>
       <option name="relationshipChange" value="Chinese:Dutch:Friendly"/>
       <option name="text" value="British_War_Japanese"/>
+    </attachment>
+    <attachment name="politicalActionAttachment_British_To_War_With_Italians" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+      <option name="conditions" value="conditionAttachmentTurn3Orhigher:conditionAttachment_British_Not_Yet_At_War_With_Italians"/>
+      <option name="relationshipChange" value="Italians:British:Unprovoked"/>
+      <option name="relationshipChange" value="Italians:UK_Pacific:Unprovoked"/>
+      <option name="relationshipChange" value="Italians:ANZAC:Unprovoked"/>
+      <option name="relationshipChange" value="Italians:Neutral_Axis:Friendly_Neutral"/>
+      <option name="relationshipChange" value="Italians:Neutral_Allies:Unfriendly_Neutral"/>
+      <option name="relationshipChange" value="Germans:Italians:Allied"/>
+      <option name="text" value="British_War_Italians"/>
+    </attachment>
+    <attachment name="politicalActionAttachment_French_To_War_With_Italians" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+      <option name="conditions" value="conditionAttachmentTurn3Orhigher:conditionAttachment_French_Not_Yet_At_War_With_Italians"/>
+      <option name="relationshipChange" value="Italians:French:Unprovoked"/>
+      <option name="relationshipChange" value="Italians:Neutral_Axis:Friendly_Neutral"/>
+      <option name="relationshipChange" value="Italians:Neutral_Allies:Unfriendly_Neutral"/>
+      <option name="relationshipChange" value="Germans:Italians:Allied"/>
+      <option name="text" value="French_War_Italians"/>
+    </attachment>
+    <attachment name="politicalActionAttachment_Italians_To_War_With_British" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+      <option name="conditions" value="conditionAttachmentTurn2Orhigher:conditionAttachment_Italians_Not_At_War_With_British"/>
+      <option name="relationshipChange" value="British:Italians:War"/>
+      <option name="relationshipChange" value="UK_Pacific:Italians:War"/>
+      <option name="relationshipChange" value="ANZAC:Italians:War"/>
+      <option name="relationshipChange" value="Dutch:Italians:War"/>
+      <option name="relationshipChange" value="Italians:Neutral_Axis:Friendly_Neutral"/>
+      <option name="relationshipChange" value="Italians:Neutral_Allies:Unfriendly_Neutral"/>
+      <option name="relationshipChange" value="Germans:Italians:Allied"/>
+      <option name="text" value="Italians_War_British"/>
+    </attachment>
+    <attachment name="politicalActionAttachment_Italians_To_War_With_French" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+      <option name="conditions" value="conditionAttachmentTurn2Orhigher:conditionAttachment_Italians_Not_At_War_With_French"/>
+      <option name="relationshipChange" value="French:Italians:War"/>
+      <option name="relationshipChange" value="Dutch:Italians:War"/>
+      <option name="relationshipChange" value="Italians:Neutral_Axis:Friendly_Neutral"/>
+      <option name="relationshipChange" value="Italians:Neutral_Allies:Unfriendly_Neutral"/>
+      <option name="relationshipChange" value="Germans:Italians:Allied"/>
+      <option name="text" value="Italians_War_French"/>
     </attachment>
     <attachment name="politicalActionAttachment_ANZAC_To_War_With_Japanese" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
       <option name="conditions" value="conditionAttachment_British_Not_Yet_At_War_With_Japanese"/>
@@ -5938,7 +5990,7 @@
       <relationship player1="Germans" player2="Chinese" type="Neutrality" roundValue="1"/>
       <relationship player1="Germans" player2="British" type="War" roundValue="1"/>
       <relationship player1="Germans" player2="UK_Pacific" type="War" roundValue="1"/>
-      <relationship player1="Germans" player2="Italians" type="Allied" roundValue="1"/>
+      <relationship player1="Germans" player2="Italians" type="Neutrality" roundValue="1"/>
       <relationship player1="Germans" player2="ANZAC" type="War" roundValue="1"/>
       <relationship player1="Germans" player2="French" type="War" roundValue="1"/>
       <relationship player1="Germans" player2="Dutch" type="War" roundValue="1"/>
@@ -5993,7 +6045,7 @@
       <relationship player1="Chinese" player2="Neutral_True" type="Strict_Neutral" roundValue="1"/>
       <relationship player1="Chinese" player2="Mongolians" type="Strict_Neutral" roundValue="1"/>
       <relationship player1="British" player2="UK_Pacific" type="Allied" roundValue="1"/>
-      <relationship player1="British" player2="Italians" type="War" roundValue="1"/>
+      <relationship player1="British" player2="Italians" type="Neutrality" roundValue="1"/>
       <relationship player1="British" player2="ANZAC" type="Allied" roundValue="1"/>
       <relationship player1="British" player2="French" type="Allied" roundValue="1"/>
       <relationship player1="British" player2="Dutch" type="Custodianship" roundValue="1"/>
@@ -6001,7 +6053,7 @@
       <relationship player1="British" player2="Neutral_Allies" type="Friendly_Neutral" roundValue="1"/>
       <relationship player1="British" player2="Neutral_True" type="Strict_Neutral" roundValue="1"/>
       <relationship player1="British" player2="Mongolians" type="Strict_Neutral" roundValue="1"/>
-      <relationship player1="UK_Pacific" player2="Italians" type="War" roundValue="1"/>
+      <relationship player1="UK_Pacific" player2="Italians" type="Neutrality" roundValue="1"/>
       <relationship player1="UK_Pacific" player2="ANZAC" type="Allied" roundValue="1"/>
       <relationship player1="UK_Pacific" player2="French" type="Allied" roundValue="1"/>
       <relationship player1="UK_Pacific" player2="Dutch" type="Custodianship" roundValue="1"/>
@@ -6009,9 +6061,9 @@
       <relationship player1="UK_Pacific" player2="Neutral_Allies" type="Friendly_Neutral" roundValue="1"/>
       <relationship player1="UK_Pacific" player2="Neutral_True" type="Strict_Neutral" roundValue="1"/>
       <relationship player1="UK_Pacific" player2="Mongolians" type="Strict_Neutral" roundValue="1"/>
-      <relationship player1="Italians" player2="ANZAC" type="War" roundValue="1"/>
-      <relationship player1="Italians" player2="French" type="War" roundValue="1"/>
-      <relationship player1="Italians" player2="Dutch" type="War" roundValue="1"/>
+      <relationship player1="Italians" player2="ANZAC" type="Neutrality" roundValue="1"/>
+      <relationship player1="Italians" player2="French" type="Neutrality" roundValue="1"/>
+      <relationship player1="Italians" player2="Dutch" type="Neutrality" roundValue="1"/>
       <relationship player1="Italians" player2="Neutral_Axis" type="Friendly_Neutral" roundValue="1"/>
       <relationship player1="Italians" player2="Neutral_Allies" type="Unfriendly_Neutral" roundValue="1"/>
       <relationship player1="Italians" player2="Neutral_True" type="Strict_Neutral" roundValue="1"/>
@@ -6415,6 +6467,9 @@
       <boolean/>
     </property>
     <property name="Neutral Flyover Allowed" value="false" editable="false">
+      <boolean/>
+    </property>
+    <property name="Units Can Load In Hostile Sea Zone" value="true" editable="true">
       <boolean/>
     </property>
     <property name="mapName" value="charles_de_gaulle_1939" editable="false"/>
