@@ -4773,6 +4773,17 @@
       <option name="when" value="before:americansPolitics"/>
       <option name="uses" value="1"/>
     </attachment>
+    <!-- NOTIFICATIONs -->
+    <attachment name="conditionAttachmentTurn1Check" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+      <option name="alliedOwnershipTerritories" value="Germany" count="1"/>
+      <option name="rounds" value="1"/>
+    </attachment>
+    <attachment name="triggerAttachment1note" attachTo="Germans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+      <option name="trigger" value="conditionAttachmentTurn1Check"/>
+      <option name="notification" value="R01"/>
+      <option name="uses" value="1"/>
+      <option name="when" value="before:germansTech"/>
+    </attachment>
     <!-- Player Attachments -->
     <attachment name="playerAttachment" attachTo="Mongolians" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
       <option name="captureUnitOnEnteringBy" value="Americans:French:British:ANZAC:Chinese:Russians:Germans:Italians:Japanese"/>
@@ -6479,7 +6490,65 @@
 <b>Global 1940 Second Edition</b><br>
 <br>
 <b>Credits:</b> Bung, Veqryn<br><br>
+<br>
+<br>
+<b>Charles de Gaulle 1939</b><br>
+<br>
+Global 1939 is a 1940 variant that uses a new setup and political situation.
+<br><br>
+Global (Europe + Pacific):<br>
+Anything not specified here is the same as 1940 2nd Edition.
+<br><br>
+Political situation changes:
+<br><br>
+Russia may not declare war on Germany/Italy until turn 5 unless attacked by the Axis.
+<br><br>
+Nazi-Soviet Pact:
+On turn 1 only, Russia is given the option of attacking/annexing any of these territories: Vyborg, Baltic States, Eastern Poland, and Bessarabia. Germany may not take any of the aforementioned territories or trigger Finalnd on turn 1 without declaring war on Russia. <b>This is Player Enforced</b>. If Russia does not take some/all of these territories, Germany may take them without consequence starting on turn 2. Vyborg is hostile to Russia and friendly to Germany. Eastern Poland is an enemy to both Russia and Germany.<br>
+<b>Note</b> Eastern Poland is "Pro-Axis". Use "Edit" if necessary.
+<br><br>
+Germany is allowed to move through the Danish straits even though Germany does not control Denmark on turn 1. You will need to use <b>Edit</b>.
+<br><br>
+Italy begins the game neutral. It cannot leave its territories. This is <b>Player Enforced</b>. Other powers cannot enter neutral Italy. Italy may declare on any Allied powers on turn 2 or later. If Italy stays neutral, the Allies may declare war on Italy on turn 3 or later. On the turn Italy declares war or the Allies attack Italy, transports may load units in shared sea zones shared between Italy and the Allies.<br><br>
 
+The United States may declare war on the Axis on the collect income phase of turn 4.<br>
+The minor industrial complexes on Western, Eastern, and Central U.S. don’t get upgraded automatically. The U.S. must pay for the upgrades if it wants them.<br><br>
+The new pro-Allies/-Axis (same rules as for Persia, Iraq, etc.) and their standing armies are<br><br>
+<b>Pro-Allies:</b><br>
+Poland: 6 infantry<br>
+Eastern Poland: 2 infantry<br>
+Denmark: 1 infantry<br>
+Norway: 2 infantry<br>
+Holland/Belgium: 3 infantry<br>
+Iceland: nothing<br>
+Greenland: nothing<br>
+Belgian Congo: 1 infantry<br><br>
+<b>Pro-Axis:</b><br>
+Slovakia/Hungary: 3 infantry, 3 tanks<br>
+Romania: 4 infantry, 1 artillery, 1 fighter<br>
+Bessarabia: nothing<br>
+Baltic States: nothing<br>
+Vyborg: 2 infantry<br>
+Northwest Persia: nothing<br>
+Persia: 2 infantry<br>
+Eastern Persia: nothing<br><br>
+When collecting NOs, treat the territories as the board represents them (e.g. the original controller).<br>
+Examples:<br>
+Iceland and Belgian Congo do not start as British anymore, but they are needed for UK’s NO for holding the empire because they have a British roundel on them.<br>
+Even though Persia is pro-Axis in this setup, it does not count in Russia’s spread of Communism NO because the board represents it as being pro-Allies.<br><br>
+<b>New Turn order and starting income/PUs in hand:</b><br>
+Germany: 14<br>
+Soviet Union: 35<br>
+United Kingdom Europe: 27<br>
+United Kingdom Pacific: 17<br>
+Italy: 10<br>
+France: 19<br>
+ANZAC: 10<br>
+Japan: 24<br>
+China: 14<br>
+United States: 52<br><br>
+This Mod is discussed in more detail here:<b>https://www.axisandallies.org/forums/topic/30608/global-europe-pacific-1939-for-1940-2nd-editon?page=1</b><br>
+<br><br>
 <b>Note</b><br>
 This game uses the latest Global 1940 2nd Edition (successor to Alpha +3) rules, as posted on Larry's website.<br>
 To blitz move mech_infantry with armour, you must click on them both at the same time (use CTRL to create waypoints).<br>
