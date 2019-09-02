@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Charles de Gaulle 1939" version="1.1"/>
+  <info name="Charles de Gaulle 1939" version="1.12"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.8"/>
   <diceSides value="6"/>
@@ -1257,6 +1257,7 @@
     <unit name="factory_minor"/>
     <unit name="factory_upgrade"/>
     <unit name="factory_major"/>
+    <unit name="Neutral_Navy"/>
   </unitList>
   <relationshipTypes>
     <relationshipType name="Allied"/>
@@ -1499,6 +1500,10 @@
     <productionRule name="buyAAGun">
       <cost resource="PUs" quantity="5"/>
       <result resourceOrUnit="aaGun" quantity="1"/>
+    </productionRule>
+    <productionRule name="buyNeutral_Navy">
+      <cost resource="PUs" quantity="1"/>
+      <result resourceOrUnit="Neutral_Navy" quantity="1"/>
     </productionRule>
     <!-- Advanced Industrial Production -->
     <!--<productionRule name="buyInfantryIndustrialTechnology">
@@ -2439,6 +2444,14 @@
       <option name="transportCost" value="3"/>
       <option name="canBeGivenByTerritoryTo" value="British"/>
       <option name="maxAAattacks" value="3"/>
+    </attachment>
+    <!-- Neutral_Navy -->
+    <attachment name="unitAttachment" attachTo="Neutral_Navy" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
+      <option name="movement" value="0"/>
+      <option name="attack" value="0"/>
+      <option name="defense" value="0"/>
+      <option name="createsResourcesList" value="0:PUs"/>
+      <option name="canBeGivenByTerritoryTo" value="Americans:French:British:ANZAC:Chinese:Russians:Germans:Italians:Japanese:Neutral_True"/>
     </attachment>
     <!-- Territory Attachments -->
     <!-- P40 -->
@@ -3671,6 +3684,13 @@
       <option name="gameProperty" value="Charles de Gaulle Neutrals"/>
       <option name="invert" value="true"/>
     </attachment>
+    <attachment name="CDGneutralsNavy" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+      <option name="gameProperty" value="Charles de Gaulle Neutrals"/>
+    </attachment>
+    <attachment name="CDGneutralsInvertNavy" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+      <option name="gameProperty" value="Charles de Gaulle Neutrals"/>
+      <option name="invert" value="true"/>
+    </attachment>
     <attachment name="objectiveAttachment_Germans_1_Trade_with_Russia" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="objectiveValue" value="5"/>
       <option name="atWarPlayers" value="Russians" count="0"/>
@@ -4240,6 +4260,7 @@
     <attachment name="triggerAttachment_Argentina" attachTo="Neutral_True" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="trigger" value="CDGneutrals"/>
       <option name="placement" value="Argentina:infantry" count="2"/>
+      <option name="placement" value="Argentina:Neutral_Navy" count="1"/>
       <option name="uses" value="1"/>
       <option name="when" value="before:germansPurchase"/>
     </attachment>
@@ -4266,6 +4287,7 @@
       <option name="placement" value="Portugal:infantry" count="2"/>
       <option name="placement" value="Portugal:artillery" count="1"/>
       <option name="placement" value="Portugal:aaGun" count="1"/>
+      <option name="placement" value="Portugal:Neutral_Navy" count="1"/>
       <option name="uses" value="1"/>
       <option name="when" value="before:germansPurchase"/>
     </attachment>
@@ -4276,6 +4298,7 @@
       <option name="placement" value="Spain:aaGun" count="1"/>
       <option name="placement" value="Spain:armour" count="1"/>
       <option name="placement" value="Spain:fighter" count="1"/>
+      <option name="placement" value="Spain:Neutral_Navy" count="1"/>
       <option name="uses" value="1"/>
       <option name="when" value="before:germansPurchase"/>
     </attachment>
@@ -4289,6 +4312,7 @@
       <option name="trigger" value="CDGneutrals"/>
       <option name="placement" value="Sweden:artillery" count="1"/>
       <option name="placement" value="Sweden:aaGun" count="1"/>
+      <option name="placement" value="Sweden:Neutral_Navy" count="1"/>
       <option name="uses" value="1"/>
       <option name="when" value="before:germansPurchase"/>
     </attachment>
@@ -4297,6 +4321,7 @@
       <option name="placement" value="Turkey:artillery" count="1"/>
       <option name="placement" value="Turkey:aaGun" count="1"/>
       <option name="placement" value="Turkey:fighter" count="1"/>
+      <option name="placement" value="Turkey:Neutral_Navy" count="1"/>
       <option name="uses" value="1"/>
       <option name="when" value="before:germansPurchase"/>
     </attachment>
@@ -6697,7 +6722,7 @@ United States: 52<br><br>
 <b>Optional</b><br>
 Adds "Charles de Gaulle Neutrals".<br>Discussed in detail here:<b>https://www.axisandallies.org/forums/topic/28180/should-we-make-better-rules-for-invadable-neutrals-1940/4?page=1</b><br><br>
 Check the box in "Map Options". You will also need to declare war on the Neutrals on Germany's first turn. There are 2 DOW options for the Neutrals. Select the first one. <br><br> 
-Neutral ships don’t affect naval at all unless you are attacking them. You will need to <b>Edit</b> the appropriate number of Ships <b>Before</b> your Combat Move. Any Ships that are not destroyed will be at war with <b>All</b> Powers, so you will need to use Edit accordingly.<br><br>
+Neutral ships don’t affect naval at all unless you are attacking them. Neutral Navies are represented with a "Neutral_Navy" <img src="Neutral_Navy.png"/> unit placed in their Home country. You will need to <b>Edit</b> the appropriate number of Ships <b>Before</b> your Combat Move. Any Ships that are not destroyed will be at war with <b>All</b> Powers, so you will need to use Edit accordingly.<br><br>
 <b>Note</b><br>
 Any Neutrals that have units other than Infantry, also have a Navy. Argentina is the only exception.<br><br>
 When attacking a neutral, the units written here are immediately placed in the attacked territory as well as any territories alligned to them (triplea does this automatically). The opposing team will pick a player<b> Player Enforced</b> to represent those forces and collect income from any of their territories you failed to take. So, after combat, use edit to change any surviving units to the Player of your choice.<br>
