@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Charles de Gaulle 1939" version="1.2"/>
+  <info name="Charles de Gaulle 1939" version="1.21"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.8"/>
   <diceSides value="6"/>
@@ -5982,8 +5982,8 @@
             <unitPlacement unitType="harbour" territory="Eastern United States" quantity="1" owner="Americans"/>
             <unitPlacement unitType="factory_minor" territory="Eastern United States" quantity="1" owner="Americans"/>
             <unitPlacement unitType="infantry" territory="West India" quantity="1" owner="British"/>
-            <unitPlacement unitType="infantry" territory="West India" quantity="1" owner="UK_Pacific"/>
-            <unitPlacement unitType="artillery" territory="West India" quantity="1" owner="UK_Pacific"/>
+            <unitPlacement unitType="infantry" territory="West India" quantity="1" owner="British"/>
+            <unitPlacement unitType="artillery" territory="West India" quantity="1" owner="British"/>
             <unitPlacement unitType="infantry" territory="Belgian Congo" quantity="1" owner="Neutral_Allies"/>
             <unitPlacement unitType="infantry" territory="Quebec" quantity="1" owner="British"/>
             <unitPlacement unitType="factory_minor" territory="Quebec" quantity="1" owner="British"/>
