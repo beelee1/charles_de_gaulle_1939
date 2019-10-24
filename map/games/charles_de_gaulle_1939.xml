@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Charles de Gaulle 1939" version="1.21"/>
+  <info name="Charles de Gaulle 1939" version="1.23"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.8"/>
   <diceSides value="6"/>
@@ -3212,12 +3212,15 @@
     </attachment>
     <attachment name="territoryAttachment" attachTo="Norway" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="3"/>
+      <option name="captureUnitOnEnteringBy" value="British:Russians:Americans:French:ANZAC"/>
     </attachment>
     <attachment name="territoryAttachment" attachTo="Denmark" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="2"/>
+      <option name="captureUnitOnEnteringBy" value="British:Russians:Americans:French:ANZAC"/>
     </attachment>
     <attachment name="territoryAttachment" attachTo="Holland Belgium" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="3"/>
+      <option name="captureUnitOnEnteringBy" value="British:Russians:Americans:French:ANZAC"/>
     </attachment>
     <attachment name="territoryAttachment" attachTo="Tobruk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="0"/>
@@ -6713,7 +6716,7 @@
     <property name="Charles de Gaulle Neutrals" value="false" editable="true">
       <boolean/>
     </property>
-    <property name="Charles de Gaulle Neutrals Modified" value="false" editable="true">
+    <property name="Charles de Gaulle Neutrals Modified" value="true" editable="true">
       <boolean/>
     </property>
     <property name="mapName" value="charles_de_gaulle_1939" editable="false"/>
@@ -6829,6 +6832,9 @@ Check the box in "Map Options". You will also need to declare war on the Neutral
 All Players begin at War with the "True Neutrals". See above. You will need to <b>Player Enforce</b> the correct behavior. Activated via "Map Options".<br><br> 
 This Mod is discussed in more detail here:<b>https://www.axisandallies.org/forums/topic/30608/global-europe-pacific-1939-for-1940-2nd-editon?page=1</b><br><br>
 <br>Change Log:
+<br>
+<br>1.23
+<br>Fix Holland, Denmark, Norway not activating for Allies. Make "Charles de Gaulle Neutrals" on by default.
 <br>
 <br>1.2
 <br>Fix Mongolians not flipping correctly. Fix Romania and Slovakia units not turning Axis when activated. Fix Italian Med objective activating when Italy not at war. Remove "Pro-Allies" from Persian territories. Adds Modified Neutrals.
