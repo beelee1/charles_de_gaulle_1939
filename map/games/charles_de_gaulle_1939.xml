@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Charles de Gaulle 1939" version="1.23"/>
+  <info name="Charles de Gaulle 1939" version="1.24"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.8"/>
   <diceSides value="6"/>
@@ -3061,6 +3061,7 @@
     </attachment>
     <attachment name="territoryAttachment" attachTo="Belgian Congo" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="1"/>
+      <option name="captureUnitOnEnteringBy" value="British:Russians:Americans:French:ANZAC"/>
     </attachment>
     <attachment name="territoryAttachment" attachTo="Iceland" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="0"/>
@@ -6833,6 +6834,8 @@ All Players begin at War with the "True Neutrals". See above. You will need to <
 This Mod is discussed in more detail here:<b>https://www.axisandallies.org/forums/topic/30608/global-europe-pacific-1939-for-1940-2nd-editon?page=1</b><br><br>
 <br>Change Log:
 <br>
+<br>1.24
+<br>Fix Congo not activating for Allies.<br>
 <br>1.23
 <br>Fix Holland, Denmark, Norway not activating for Allies. Make "Charles de Gaulle Neutrals" on by default.
 <br>
